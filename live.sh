@@ -8,10 +8,10 @@ read -p "Which disk do you want to partition ? (/dev/sdX:  " DISK
 fdisk $DISK
 fi
 fdisk -l
-read -p "Input the / mount point:  " ROOT
+read -p "Input the root mount point:  " ROOT
 read -p "Format it ? (y or Enter  " TMP
 if [ "$TMP" == y ]
-then read -p "Input y to use ext4 defalut to use btrfs  " TMP
+then read -p "Input y to use ext4 or defalut to use btrfs  " TMP
 if [ "$TMP" == y ]
 then mkfs.ext4 $ROOT
 else mkfs.btrfs $ROOT -f
