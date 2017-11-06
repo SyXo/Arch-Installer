@@ -64,6 +64,7 @@ do
   pacstrap /mnt base base-devel --force
   rm /mnt/etc/fstab
   genfstab -U -p /mnt >> /mnt/etc/fstab
+  cat /mnt/etc/fstab
   read -p "Successfully installed ? (n or Enter  " TMP
 done
 
