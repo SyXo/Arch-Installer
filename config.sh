@@ -82,12 +82,12 @@ echo "[archlinuxcn]
 SigLevel = Never
 Server = http://mirrors.163.com/archlinux-cn/\$arch" >> /etc/pacman.conf
 TMP=n
-while [ "$TMP" == n ]
+while [ "$TMP" == n ] 
 do
   pacman -Syu&&pacman -S archlinuxcn-keyring&&pacman -S iw wpa_supplicant dialog networkmanager xorg-server xterm firefox yaourt wqy-zenhei wqy-microhei gnome-keyring
   systemctl enable NetworkManager
   read -p "Do you have bluetooth ? (y or Enter  " TMP
-  if [ "$TMP" == y ]
+  if [ "$TMP" == y ] 
   then pacman -S bluez blueman&&systemctl enable bluetooth
   fi
   read -p "Successfully installed ? (n or Enter  " TMP
